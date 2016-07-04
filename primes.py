@@ -9,6 +9,7 @@ time1 = 0
 #waiting for input from user
 print(' Hi!')
 prGreen("I can calculate all the primes from 0 to n insanely fast")
+prCyan("For your own sake, don't use n > 10.000.000 unless you want to wait for a few minutes")
 n = int(input(" Enter n ="))
 
 #go!
