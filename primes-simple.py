@@ -12,4 +12,4 @@ def primes(n):
             for j in lst_div:
                 a[j] = 0 #make those numbers zeros so they don't pass the if statement
         i += 1
-    print (lst)
+    print (lst) # shouldn't it be return(lst) ?
