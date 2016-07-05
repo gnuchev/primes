@@ -1,7 +1,7 @@
+lst = [] #empty list where the prime numbers go
 def primes(n):
     a = list(range(n+1)) #generate all whole numbers from 0 to n
     a[1] = 0 # replace 1 in a list by 0 so it doesn't pass the if statement
-    lst = [] #empty list where the prime numbers go
 
     i = 2 # the first 2 numbers in a are 0 and 0, so we start by the 3 a[2]
     while i <= n:
