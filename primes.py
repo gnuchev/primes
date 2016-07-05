@@ -10,22 +10,23 @@ time1 = 0
 print(' Hi!')
 prGreen("I can calculate all the primes from 0 to n insanely fast")
 prCyan("For your own sake, don't use n > 10.000.000 unless you want to wait for a few minutes")
-n = int(input(" Enter n ="))
+n = int(input(" Enter n =")) #спрашивает число n
 
 #go!
 start = time.time()
 
 #calculation
-a = list(range(n+1))
-a[1] = 0
-lst = [1]
+a = list(range(n+1)) #добавляет список всех натуральных чисел от 0 до n+1, первое число a[0] = 0
+a[1] = 0 #заменяет второе число было 1 на 0 чтобы не прошло if выражение
+# lst = [1] !!! тут на самом деле нужно убрать 1 так, как 1 не является простым числом
+lst = [] # убрал 1 из список простых чисел
 
-i = 2
+i = 2 # начинаем с a[2] = 0 так как a[0] и a[1] = 0
 while i <= n:
-    if a[i] != 0:
+    if a[i] != 0:  # исключаем  a[0] и a[1]
         lst.append(a[i])
-        for j in list(range(i, n+1, i)):
-            a[j] = 0
+        for j in list(range(i, n+1, i)): # тут создается список всех чисел при умножении на i до n+1
+            a[j] = 0 ##заменяет эти числа  на 0 чтобы не прошли if выражение
     i += 1
 
 #calculation done! It's time to update time
@@ -39,7 +40,7 @@ print('Printing results:')
 time.sleep(2)
 
 #printing list of all prime numbers in range
-prCyan(lst)
+prCyan(lst) #вазврашает список всех простых чисел до n
 
 #and some fun facts
 print('')
