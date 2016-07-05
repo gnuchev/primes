@@ -26,7 +26,7 @@ while i <= n:
     if a[i] != 0:  # исключаем  a[0] и a[1]
         lst.append(a[i])
         for j in list(range(i, n+1, i)): # тут создается список всех чисел при умножении на i до n+1
-            a[j] = 0 ##заменяет эти числа  на 0 чтобы не прошли if выражение
+            a[j] = 0 # заменяет эти числа  на 0 чтобы не прошли if выражение
     i += 1
 
 #calculation done! It's time to update time
@@ -40,7 +40,7 @@ print('Printing results:')
 time.sleep(2)
 
 #printing list of all prime numbers in range
-prCyan(lst) #вазврашает список всех простых чисел до n
+prCyan(lst) # вазврашает список всех простых чисел до n
 
 #and some fun facts
 print('')
